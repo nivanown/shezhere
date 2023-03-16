@@ -1,11 +1,35 @@
-﻿/*- partners-slider -*/
+﻿/*- menu-btn -*/
+var siteBtn = $('.menu-btn'),
+  siteMenu= $('.header__bottom-panel');
+
+siteBtn.on('click', function(){
+  $(this).toggleClass('open');
+  siteMenu.toggleClass('show');
+});
+
+/*- partners-slider -*/
 var swiper = new Swiper('.partners-slider', {
   slidesPerView: 5,
   spaceBetween: 92,
   loop: true,
   navigation: {
-    nextEl: '.partners-slider .swiper-button-next',
-    prevEl: '.partners-slider .swiper-button-prev',
+    nextEl: '.partners-slider-wrap .swiper-button-next',
+    prevEl: '.partners-slider-wrap .swiper-button-prev',
+  },
+  breakpoints: {
+    0: {
+      autoHeight: true,
+      slidesPerView: 2,
+      spaceBetween: 15,
+    },
+    580: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    1190: {
+      slidesPerView: 5,
+      spaceBetween: 50,
+    },
   },
 });
 
