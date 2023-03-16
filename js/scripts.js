@@ -35,12 +35,27 @@ var swiper = new Swiper('.partners-slider', {
 
 /*- mov-slider -*/
 var swiper = new Swiper('.mov-slider', {
+  autoHeight: true,
   slidesPerView: 3,
   spaceBetween: 12,
   loop: true,
   navigation: {
     nextEl: '.mov-slider-wrap .swiper-button-next',
     prevEl: '.mov-slider-wrap .swiper-button-prev',
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 5,
+    },
+    420: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    680: {
+      slidesPerView: 3,
+      spaceBetween: 12,
+    },
   },
 });
 

@@ -1414,11 +1414,6 @@ body {
   color: #A3302C;
   }
 
-/* info-list */
-.info-list .info { 
-  margin: 0 0 90px;
-  }
-
 .info-list .info:last-child { 
   margin: 0;
   }
@@ -1499,6 +1494,12 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 30px 107px;
   margin: 0 0 90px;
+  }
+
+.document { 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   }
 
 .document__photo img { 
